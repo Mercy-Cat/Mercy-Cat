@@ -1,7 +1,8 @@
+require('dotenv').config();
 // require the discord.js module
 const { Client, RichEmbed } = require('discord.js');
 
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
 // create a new Discord client
 const client = new Client();
 
@@ -16,13 +17,19 @@ client.on('ready', () => {
 		game: { name: 'with discord.js' },
 		status: 'online',
 	});
-	console.log(`${client.user.username} is up and running!`);
+
+	setInterval(function() {
+		const currentTime = new Date().toLocaleTimeString('ru-RU', { timeZone: 'Europe/Moscow' });
+		console.log(currentTime);
+		client.channels.get('594094356785266700').setName(currentTime + ' МСК');
+	}, 60000);
+	console.log(`${client.user.username} is up and running on ${client.guilds.size} servers!`);
 });
 
 client.on('message', message => {
 	console.log(message.content);
 	if (message.content === `${prefix}mercy`) {
-		// send back "Pong." to the channel the message was sent in
+		// send back "I'm taking care of you, {message author}." to the channel the message was sent in
 		// message.channel.send('Did someone call a doctor?');
 		message.channel.send(`I'm taking care of you, ${message.author}!`);
 	}
@@ -30,7 +37,7 @@ client.on('message', message => {
 		message.channel.send(`:wave: Hello, ${message.author}!`);
 	}
 	// If the message is "how to embed"
-	if (message.content === 'test embed') {
+	if (message.content === `${prefix}te`) {
 		// We can create embeds using the MessageEmbed constructor
 		// Read more about all that you can do with the constructor
 		// over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
@@ -44,7 +51,8 @@ client.on('message', message => {
 		// Send the embed to the same channel as the message
 		message.channel.send(embed);
 	}
+
 });
 
 // login to Discord with your app's token
-client.login(token);
+client.login(process.env.TOKEN);

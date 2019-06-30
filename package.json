@@ -9,13 +9,18 @@
   },
   "bugs": {
     "url": "https://github.com/ivas1ly/Mercy-Cat/issues"
-},
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "*"
+  },
   "dependencies": {
     "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0",
     "eslint": "^5.16.0"
   },
   "scripts": {
-  	"start": "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ivas1ly",
