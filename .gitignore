@@ -1,5 +1,6 @@
 .vscode
 .DS_Store
+database.sqlite3
 # Logs
 logs
 *.log

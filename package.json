@@ -1,26 +1,35 @@
 {
-  "name": "mercy-cat-bot",
-  "version": "0.1.0",
+  "name": "mercy-cat",
+  "version": "0.1.1",
   "description": "Mercy Cat Discord bot",
-  "main": "index.js",
+  "main": "mercy.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivas1ly/Mercy-Cat.git"
+    "url": "https://github.com/Mercy-Cat/Mercy-Cat.git"
   },
   "bugs": {
-    "url": "https://github.com/ivas1ly/Mercy-Cat/issues"
+    "url": "https://github.com/Mercy-Cat/Mercy-Cat/issues"
   },
   "engines": {
     "node": "12.x",
     "npm": "*"
   },
   "dependencies": {
+    "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
-    "dotenv": "^8.0.0",
-    "eslint": "^5.16.0"
+    "discord.js-commando": "^0.10.0",
+    "eslint": "^5.16.0",
+    "query-string": "^6.8.1",
+    "r2": "^2.0.1",
+    "sqlite": "^3.0.3",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "dotenv": "^8.0.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node mercy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ivas1ly",
