@@ -2,7 +2,6 @@ const commando = require('discord.js-commando');
 const { RichEmbed } = require('discord.js');
 const querystring = require('query-string');
 const r2 = require('r2');
-require('dotenv').config();
 const CAT_API_URL = 'https://api.thecatapi.com/';
 const CAT_API_KEY = process.env.CAT_API_KEY;
 

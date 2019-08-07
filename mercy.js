@@ -2,7 +2,6 @@ const commando = require('discord.js-commando');
 const path = require('path');
 const oneLine = require('common-tags').oneLine;
 const sqlite = require('sqlite');
-require('dotenv').config();
 
 const mercy = new commando.CommandoClient({
 	owner: '209258844226846722',

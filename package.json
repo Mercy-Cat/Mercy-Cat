@@ -25,11 +25,12 @@
     "weather-js": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1",
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.1"
   },
   "scripts": {
     "start": "node mercy.js",
+    "start_local": "npx nodemon -r dotenv/config mercy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ivas1ly",

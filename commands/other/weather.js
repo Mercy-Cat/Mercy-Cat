@@ -1,7 +1,6 @@
 const commando = require('discord.js-commando');
 const weather = require('weather-js');
 const { RichEmbed } = require('discord.js');
-require('dotenv').config();
 
 module.exports = class WeatherCommand extends commando.Command {
 	constructor(mercy) {

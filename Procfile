@@ -1,1 +1,1 @@
-worker: node mercy.js
+worker: npm start
