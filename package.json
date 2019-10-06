@@ -1,6 +1,6 @@
 {
   "name": "mercy-cat",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mercy Cat Discord bot",
   "main": "mercy.js",
   "repository": {
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "node mercy.js",
-    "start_local": "npx nodemon -r dotenv/config mercy.js",
+    "dev": "npx nodemon -r dotenv/config mercy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ivas1ly",

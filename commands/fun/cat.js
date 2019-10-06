@@ -17,6 +17,7 @@ module.exports = class CatCommand extends commando.Command {
 	}
 
 	async run(message) {
+		const mercy = this.client;
 		try{
 			const images = await this.loadImage(message.author.username);
 			const image = images[0];
@@ -24,7 +25,8 @@ module.exports = class CatCommand extends commando.Command {
 			const embed = new RichEmbed()
 				.setTitle('Cat :3')
 				.setColor('RANDOM')
-				.setImage(image.url);
+				.setImage(image.url)
+				.setFooter('https://github.com/Mercy-Cat/Mercy-Cat', `${mercy.user.avatarURL}`);
 			message.channel.send(embed);
 		}
 		catch(error) {

@@ -9,7 +9,7 @@ module.exports = class InfoCommand extends commando.Command {
 			aliases: ['i', 'info', 'inf', 'information', 'about'],
 			group: 'utilities',
 			memberName: 'info',
-			description: 'Shows Mercy Cat bot information.',
+			description: 'Shows bot information.',
 			throttling:{
 				usages: 5,
 				duration: 10,
@@ -27,15 +27,9 @@ module.exports = class InfoCommand extends commando.Command {
 			.addField('Version', `${version}`, true)
 			.addField('Developer', `${mercy.owners[0].username}#${mercy.owners[0].discriminator}`, true)
 			.addField('Useful links',
-				`[GitHub](https://github.com/Mercy-Cat/Mercy-Cat)
-			[Developer](https://github.com/ivas1ly)
-			[Known issues](https://github.com/Mercy-Cat/Mercy-Cat/issues)
-			`, true)
+				'[GitHub](https://github.com/Mercy-Cat/Mercy-Cat)\n[Developer](https://github.com/ivas1ly)\n[Known issues](https://github.com/Mercy-Cat/Mercy-Cat/issues)', true)
 			.addField('I\'m based on',
-				`[Discord.js](https://discord.js.org) 11.5.1 stable
-				[Commando](https://github.com/discordjs/Commando)
-				[TheCatAPI](https://thecatapi.com/)
-				[Avatar author](https://vk.com/overmercy)`, true)
+				'[Discord.js](https://discord.js.org) 11.5.1 stable\n[Commando](https://github.com/discordjs/Commando)\n[TheCatAPI](https://thecatapi.com/)\n[Avatar](https://vk.com/overmercy)', true)
 			.setColor('#ff335c')
 			.setFooter('https://github.com/Mercy-Cat/Mercy-Cat', `${mercy.user.avatarURL}`);
 		message.channel.send(embed);

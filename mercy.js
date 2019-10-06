@@ -8,12 +8,13 @@ const mercy = new commando.CommandoClient({
 	commandPrefix: '-',
 	disableEveryone: true,
 	unknownCommandResponse: true,
+	invite: 'https://discord.gg/xDD6nSg',
 });
 
 mercy
 	.on('ready', () => {
 		console.log(`Client ready! Logged in as ${mercy.user.username}#${mercy.user.discriminator} (${mercy.user.id})`);
-		mercy.user.setActivity(`${mercy.commandPrefix}help | on ${mercy.guilds.size} servers`, { type: 'WATCHING' });
+		mercy.user.setActivity(`@${mercy.user.username}#${mercy.user.discriminator} help`, { type: 'WATCHING' });
 		/* setInterval(function() {
 			const currentTime = new Date().toLocaleTimeString('ru-RU', { timeZone: 'Europe/Moscow' });
 			console.log(currentTime);
@@ -64,7 +65,7 @@ mercy.registry
 	.registerGroups([
 		['fun', 'Fun commands'],
 		['other', 'Other commands'],
-		['utilities', 'Various service commands for Mercy Cat bot'],
+		['util', 'Various service commands for Mercy Cat bot'],
 	])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
